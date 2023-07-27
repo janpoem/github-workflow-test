@@ -8,6 +8,10 @@
     "lint": "eslint src --ext .ts,.tsx,.js,.jsx",
     "build": "npm run lint && npm run test && tsc"
   },
+  "files": [
+    "dist"
+  ],
+  "types": "disc/index.d.ts",
   "engines": {
     "node": ">= 18.0.0"
   },
