@@ -1,6 +1,6 @@
 {
   "name": "github-workflow-test",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "scripts": {
     "dev:start": "ts-node src/index.ts",
@@ -9,13 +9,11 @@
     "build": "npm run lint && npm run test && tsc"
   },
   "engines": {
-    "node": ">= 16.0.0"
+    "node": ">= 18.0.0"
   },
-  "author": "",
-  "license": "UNLICENSED",
+  "author": "Jiankai Zeng <janpoem@163.com>",
+  "license": "MIT",
   "dependencies": {
-    "tslib": "^2",
-    "@swc/helpers": "^0.4.14"
   },
   "devDependencies": {
     "@types/node": "^16",
