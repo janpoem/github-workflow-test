@@ -1,5 +1,5 @@
 
 export function helloWorld() {
-  console.log('1');
+  console.log('2');
   return 'hello world';
 }
