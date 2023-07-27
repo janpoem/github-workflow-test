@@ -46,8 +46,7 @@ jobs:
     - name: Build
       run: pnpm run build
 
-    - name: Publish package to NPM 📦
-      uses: JS-DevTools/npm-publish@v2
-      with:
-        token: ${{ secrets.NPM_TOKEN }}
-        strategy: all
+    - name: whoami
+      run: npm whoami
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
