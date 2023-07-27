@@ -9,7 +9,6 @@
     "emitDecoratorMetadata": true,
     "importHelpers": true,
     "pretty": true,
-    "rootDir": "src",
     "outDir": "dist",
     "baseUrl": "./",
     "types": [
