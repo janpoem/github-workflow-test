@@ -47,7 +47,7 @@ jobs:
       run: pnpm run build
 
     - name: Publish package to NPM 📦
-      run: npm publish --access public
-
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      uses: JS-DevTools/npm-publish@v2
+      with:
+        token: ${{ secrets.NPM_TOKEN }}
+        strategy: all
