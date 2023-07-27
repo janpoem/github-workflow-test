@@ -47,12 +47,7 @@ jobs:
     - name: Build
       run: pnpm run build
 
-#    - name: Npmrc
-#      run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
-
     - name: Publish package to NPM 📦
       run: npm publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        token: ${{ secrets.NPM_TOKEN }}
