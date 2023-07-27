@@ -45,3 +45,16 @@ jobs:
 
     - name: Build
       run: pnpm run build
+
+    - name: checkVersion
+      uses: EndBug/version-check@v1
+      with:
+        file-url: "https://unpkg.com/github-workflow-test@latest/package.json"
+        static-checking: localIsNew
+
+    - name: Publish package to NPM 📦
+      if: steps.check.outputs.changed == 'true' && startsWith(github.ref, 'refs/tags/v')
+      run: npm publish
+
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
